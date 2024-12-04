@@ -2,8 +2,11 @@
 echo -e "\e[38;5;118mAdding and committing all changes\e[0m"
 git add --all
 message = "$@"
-echo "wtf"
-if [[ "$1" =~ "'" ]]; then
+if [[ "$message" =~ "-p" ]]; then
+    message=$(echo "$message" | sed 's/-p//g')
+    git push
+fi
+if [[ "$message" =~ "'" ]]; then
     git commit -m "$message"
 else
     git commit -m "'$message'"
