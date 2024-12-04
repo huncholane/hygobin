@@ -1,5 +1,5 @@
 #!/bin/bash
-echo -e "\e[38;5;118mAdding and committing all changes\e[0m"
+echo -e "\e[38;5;118mAdding and committing all changes\e"
 git add --all
 message="$@"
 push=false
@@ -15,7 +15,10 @@ else
     git commit -m "'$message'"
 fi
 
+echo -e "\e[0m"
+
 if [[ "$push" == true ]]; then
-    echo -e "\e[38;5;126mPushing to remote\e[0m"
+    echo -e "\e[38;5;126mPushing to remote\e"
     git push
+    echo -e "\e[0m"
 fi
