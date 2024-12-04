@@ -1,4 +1,4 @@
 #!/bin/bash
 for i in {0..255}; do printf "\e[38;5;${i}m%4d " $i; ((i%16==15)) && echo ""; done; echo -e "\e[0m"
 
-echo "Use these colors with \\e[38;5;NUMmMESSAGE\\e[0m"
+echo "Use these colors with \\e[38;5;<number>m<message>\\e[0m"

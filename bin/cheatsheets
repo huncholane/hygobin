@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -e "\e[38;5;195mLinks to useful cheatsheets\n\e[38;5;120m"
+echo "Bash: https://devhints.io/bash"
+echo -e "\e[0m";

@@ -1,0 +1,6 @@
+#!/bin/bash
+echo -e "\e[38;5;105mRestarting docker compose and watching logs "$1"\e[0m"
+docker compose build
+docker compose down --remove-orphans
+docker compose up -d
+docker compose logs -f "$1"

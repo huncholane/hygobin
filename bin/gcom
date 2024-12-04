@@ -1,0 +1,10 @@
+#!/bin/bash
+echo -e "\e[38;5;118mAdding and committing all changes\e[0m"
+git add --all
+message = "$@"
+echo "wtf"
+if [[ "$1" =~ "'" ]]; then
+    git commit -m "$message"
+else
+    git commit -m "'$message'"
+fi

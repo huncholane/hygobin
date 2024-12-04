@@ -1,0 +1,3 @@
+#!/bin/bash
+echo -e "\e[38;5;196mKilling all docker compose services\e[0m"
+docker compose down --remove-orphans

@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -e "\e[38;5;202mThe following are all the hygobin scripts"
+ls ~/.hygobin/bin
+echo -e "\e[0m"
