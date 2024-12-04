@@ -11,9 +11,9 @@
 ```
 git clone https://github.com/huncholane/hygobin ~/.hygobin
 
-echo "\n# Enable hygobin scripts" >> ~/.bashrc
+echo -e "\n# Enable hygobin scripts" >> ~/.bashrc
 echo "chmod +x -R ~/.hygobin/bin" >> ~/.bashrc
-echo "export PATH="$PATH:$HOME/.hygobin/bin\n" >> ~/.bashrc
+echo 'export PATH=$PATH:$HOME/.hygobin/bin\n' >> ~/.bashrc
 source ~/.bashrc
 ```
 
