@@ -2,12 +2,20 @@
 echo -e "\e[38;5;118mAdding and committing all changes\e[0m"
 git add --all
 message="$@"
+push=false
+
 if [[ "$message" =~ "-p" ]]; then
     message=$(echo "$message" | sed 's/-p//g')
-    git push
+    push=true
 fi
+
 if [[ "$message" =~ "'" ]]; then
     git commit -m "$message"
 else
     git commit -m "'$message'"
+fi
+
+if [[ "$push" == true ]]; then
+    echo -e "\e[38;5;26mPushing to remote\e[0m"
+    git push
 fi
