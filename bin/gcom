@@ -16,6 +16,6 @@ else
 fi
 
 if [[ "$push" == true ]]; then
-    echo -e "\e[38;5;26mPushing to remote\e[0m"
+    echo -e "\e[38;5;126mPushing to remote\e[0m"
     git push
 fi
