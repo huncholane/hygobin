@@ -1,0 +1,6 @@
+#!/bin/bash
+cmd="$@"
+dir="$(pwd)"
+
+# Execute the command and highlight occurrences of the current directory
+$cmd 2>&1 | sed "s|$(pwd)|$(printf '\e[1;34m')$(pwd)$(printf '\033[0m')|g"
