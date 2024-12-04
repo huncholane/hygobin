@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Display text styles
+echo -n "Text Styles          "
+styles=("0 Normal" "1 Bold" "3 Italic" "4 Underline" "5 Blink" "7 Reverse" "9 Strikethrough")
+for style in "${styles[@]}"; do
+  code=$(echo "$style" | awk '{print $1}')
+  desc=$(echo "$style" | awk '{$1=""; print $0}')
+  echo -e -n "\e[${code}mCode  ${code}\e[0m "
+done
+
+echo
+
+# Display foreground colors
+echo -n "Foreground Colors    "
+for fg in {30..37}; do
+  echo -e -n "\e[${fg}mCode ${fg}\e[0m "
+done
+
+echo
+
+# Display background colors
+echo -n "Background Colors    "
+for bg in {40..47}; do
+  echo -e -n "\e[${bg}mCode ${bg}\e[0m "
+done
+
+echo
+
+# Reminder on how to use these
+echo -e "\n\e[2mExample Usage:"
+echo "\\e[<STYLE>;<FG>;<BG>mText"
+echo -e -n "\e[0m"
+echo -e "Replace <STYLE>, <FG>, <BG> with the desired codes.\e[0m"
