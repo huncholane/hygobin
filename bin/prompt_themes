@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Check if an argument (theme name) is provided
+if [[ -n $1 ]]; then
+    case "$1" in
+        "default")
+            echo '>>> \e[33m\u\e[34m@\h\e[35m:\w (\e[32mmain\e[0m)\n>>> \d \t\n>>> $(random_quote)\n>>> \e[0m🚀 '
+            ;;
+        "fuck")
+            echo "\e[1;32m\u\e[0m@\e[1;34m\h\e[0m:\e[1;36m\w\e[0m $(git_branch_str)\n🚀 "
+            ;;
+        "minimal")
+            echo '\e[1;33m\u\e[0m:\e[1;36m\w\e[0m $ '
+            ;;
+        "colorful")
+            echo '\e[1;31m\u\e[0m@\e[1;34m\h\e[0m:\e[1;36m\w\e[0m $(random_quote) 🌟 '
+            ;;
+        *)
+            echo "Error: Unknown theme '$1'. Available themes: default, minimal, colorful."
+            exit 1
+            ;;
+    esac
+else
+    echo "Usage: prompt_themes [theme_name]"
+    echo "Available themes: default, minimal, colorful."
+    exit 1
+fi
