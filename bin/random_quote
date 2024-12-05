@@ -1,0 +1,2 @@
+#!/bin/bash
+echo -e "\e[3m$(shuf -n 1 ~/.hygobin/resources/quotes.txt)\e[0m"
