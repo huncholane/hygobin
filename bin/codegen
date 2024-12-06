@@ -1,0 +1,2 @@
+#!/bin/bash
+python ~/.hygobin/python_scripts/codegen/cli.py $@
