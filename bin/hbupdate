@@ -1,0 +1,6 @@
+#!/bin/bash
+start_dir=$(pwd)
+cd ~/.hygobin
+git pull
+cd "$start_dir"
+bash
