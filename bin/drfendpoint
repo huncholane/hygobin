@@ -1,0 +1,10 @@
+#!/bin/bash
+start_dir=$(pwd)
+mkdir -p "$1"
+cd "$1"
+touch views.py urls.py serializers.py __init__.py models.py
+mkdir tests
+cd tests
+mkdir uploads responses
+touch tests.py __init__.py
+cd "$start_dir"
