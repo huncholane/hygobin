@@ -1,5 +1,5 @@
 #!/bin/bash
-branchname=$(git branch --show-current)
+branchname=$(git branch --show-current 2>/dev/null)
 if [[ -n $branchname ]]; then
     echo -e "(\e[3;32m$branchname\e[0m)"
 fi
