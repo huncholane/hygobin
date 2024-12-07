@@ -1,0 +1,2 @@
+#!/bin/bash
+code /etc/nginx/conf.d/
