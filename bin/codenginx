@@ -1,2 +1,3 @@
 #!/bin/bash
-code /etc/nginx/conf.d/
+sudo chown -R $USER:$USER /etc/nginx/
+code /etc/nginx/
