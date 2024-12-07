@@ -1,5 +1,11 @@
 #!/bin/bash
 branchname=$(git branch --show-current 2>/dev/null)
+if [[ $? -ne 0 ]]; then
+    exit 1
+fi
 if [[ -n $branchname ]]; then
     echo -e "(\e[3;32m$branchname\e[0m)"
+else
+    branchname=$(git branch | grep -oP '(?<=\().*(?=\))')
+    echo -e "(\e[3;38;5;196m$branchname\e[0m)"
 fi
