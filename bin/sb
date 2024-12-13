@@ -1,3 +1,3 @@
 #!/bin/bash
 echo -e "\e[38;5;202mSourcing bashrc...\e[0m"
-bash
+source ~/.bashrc
